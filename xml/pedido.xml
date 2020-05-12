@@ -1,0 +1,17 @@
+<pedidos>
+ <pedido id="23456">
+  <cliente>Juan Luis</cliente>
+  <fecha>23/05/2020</fecha>
+  <pastel>Tarta chocolate</pastel> 
+ </pedido>
+ <pedido id="33333">
+  <cliente>Pedro</cliente>
+  <fecha>12/04/2020</fecha>
+  <pastel>Bizcocho</pastel> 
+ </pedido>
+ <pedido id="23456">
+  <cliente>Ana</cliente>
+  <fecha>12/03/2020</fecha>
+  <pastel>Napolitana</pastel> 
+ </pedido>
+</pedidos>

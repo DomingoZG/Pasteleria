@@ -1,0 +1,17 @@
+<clientes>
+     <cliente dni="22333444A">
+          <nombre>Pedro Perez</nombre>
+          <telefono>666333555</telefono>
+          <direccion>Calle Esquina</direccion>
+     </cliente>
+     <cliente dni="33222444B">
+          <nombre>Marcia Ana</nombre>
+          <telefono>555999444</telefono>
+          <direccion>Calle Ramona</direccion>
+     </cliente>
+     <cliente dni="55333888C">
+          <nombre>Arturo Arturez</nombre>
+          <telefono>111000222</telefono>
+          <direccion>Calle Penumbra</direccion>
+     </cliente>
+</clientes>

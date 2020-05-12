@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Pasteleria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+     <!--JUMBOTRON-->
+             
+     <div class="jumbotron jumbotron-fluid" style="background-color:#aff1ee; text-align: center;">
+        <div class="container">
+          <h1  class="display-4">PASTELERIA</h1>
+          <p class="lead">Domingo Zambrano</p>
+        </div>
+</div>
+  <!--Barra nav-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light pt-0 mt-0 mb-2 pb-2">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--Cliente-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Clientes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" type="button" onclick='mostrar("#formCliente")'>Añadir</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" type="button" id="listadoCliente"
+                          >Listado</a>
+                </div>
+           </li>
+           <!--Empleado-->
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Empleados
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <a class="dropdown-item" type="button" onclick='mostrar("#formEmpleado")'>Añadir</a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" type="button" id="listadoEmpleado"
+                      >Listado</a>
+            </div>
+          </li>
+         
+           <!--Pasteles-->
+          <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pasteles
+              </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" type="button" onclick='mostrar("#formPasteles")'>Añadir</a>
+              <div class="dropdown-divider"></div>
+               <a class="dropdown-item" type="button" id="listadoPasteles"
+               >Listado</a>
+              </div>
+         </li>
+
+         <!--Pedidos-->
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Pedidos
+             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" type="button" onclick='mostrar("#formPedido")'>Añadir</a>
+             <div class="dropdown-divider"></div>
+              <a class="dropdown-item" type="button" id="listadoPedidos"
+              >Listado</a>
+             </div>
+        </li>
+
+        <!--Establecimiento-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Establecimientos
+             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" type="button" onclick='mostrar("#formEstablecimiento")'>Añadir</a>
+             <div class="dropdown-divider"></div>
+              <a class="dropdown-item" type="button" id="listadoEstablecimiento"
+              >Listado</a>
+             </div>
+        </li>
+          
+
+
+
+        </ul>    
+    </div>    
+
+</nav>   
+<!--Formularios-->
+<div id="contenido" class="col-12">
+
+    <!--CLIENTES-->
+    <div id="formCliente" class="col-8 m-auto divHijo pt-4" style="display: none;">
+        <form  >
+             <div class="form-group row">
+                  <label for="dniCliente" class="col-4 col-form-label">DNI:</label>
+                  <div class="col-8">
+                       <input id="dniCliente" name="dniCliente" type="text" required="required"
+                            class="form-control">
+                  </div>
+             </div>
+             <div class="form-group row">
+                  <label for="nombreCliente" class="col-4 col-form-label" >Nombre:</label>
+                  <div class="col-8">
+                       <input id="nombreCliente" name="nombreCliente" type="text" required="required"
+                            class="form-control">
+                  </div>
+             </div>
+             <div class="form-group row">
+                  <label for="tlfCliente" class="col-4 col-form-label">Teléfono:</label>
+                  <div class="col-8">
+                       <input id="tlfCliente" name="tlfCliente" type="text" required="required"
+                            class="form-control">
+                  </div>
+             </div>
+             <div class="form-group row">
+                  <label for="dirCliente" class="col-4 col-form-label">Dirección:</label>
+                  <div class="col-8">
+                       <input id="dirCliente" name="dirCliente" type="text" required="required"
+                            class="form-control">
+                  </div>
+             </div>
+             <div class="form-group row">
+                  <div class="offset-4 col-8">
+                       <button id="botonAddCliente" type="button" class="btn btn-primary">Enviar</button>
+                  </div>
+             </div>
+        </form>
+   </div>
+   <div id="divMostrarListaClientes" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
+
+   <!--EMPLEADOS-->
+    <div id="formEmpleado" class="col-8 m-auto divHijo pt-4" style="display: none;">
+     <form>
+         <div class="form-group row">
+              <label for="dniEmpleado" class="col-4 col-form-label">DNI:</label>
+              <div class="col-8">
+                   <input id="dniEmpleado" name="dniEmpleado" type="text" required="required"
+                        class="form-control">
+              </div>
+         </div>
+         <div class="form-group row">
+              <label for="nombreEmpleado" class="col-4 col-form-label">Nombre:</label>
+              <div class="col-8">
+                   <input id="nombreEmpleado" name="nombreEmpleado" type="text" required="required"
+                        class="form-control">
+              </div>
+         </div>
+         <div class="form-group row">
+              <label for="tlfEmpleado" class="col-4 col-form-label">Teléfono:</label>
+              <div class="col-8">
+                   <input id="tlfEmpleado" name="tlfEmpleado" type="text" required="required"
+                        class="form-control">
+              </div>
+         </div>
+         <div class="form-group row">
+            <label for="cargoEmpleado" class="col-4 col-form-label">Cargo:</label>
+            <div class="col-8">
+                 <div class="custom-controls-stacked">
+                      <div class="custom-control custom-checkbox">
+                           <input name="cargoEmpleado" id="cargoEmpleado" type="checkbox"
+                                class="custom-control-input" value="repartidor">
+                           <label for="cargoEmpleado" class="custom-control-label">Repartidor</label>
+                      </div>
+                 </div>
+                 <div class="custom-controls-stacked">
+                      <div class="custom-control custom-checkbox">
+                           <input name="cargoEmpleado1" id="cargoEmpleado1" type="checkbox"
+                                class="custom-control-input" value="pastelero">
+                           <label for="cargoEmpleado1" class="custom-control-label">Pastelero</label>
+                      </div>
+                 </div>     
+            </div>
+       </div>
+         <div class="form-group row">
+                <label for="emailEmpleado" class="col-4 col-form-label">Email:</label>
+                <div class="col-8">
+                     <input id="emailEmpleado" name="emailEmpleado" type="text" required="required"
+                          class="form-control">
+         </div>
+         </div>
+         <div class="form-group row">
+              <div class="offset-4 col-8">
+                   <button id="botonAddEmpleado" type="button" class="btn btn-primary">Enviar</button>
+              </div>
+         </div>
+     </form>
+   </div>
+  <div id="divMostrarListaEmpleados" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
+
+  <!--PASTELES-->
+  <div id="formPasteles" class="col-8 m-auto divHijo pt-4" style="display: none;">
+     <form>
+          <div class="form-group row">
+               <label for="idPastel" class="col-4 col-form-label">ID:</label>
+               <div class="col-8">
+                    <input id="idPastel" name="idPastel" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="nombrePastel" class="col-4 col-form-label">Nombre:</label>
+               <div class="col-8">
+                    <input id="nombrePastel" name="nombrePastel" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="precioPastel" class="col-4 col-form-label">Precio:</label>
+               <div class="col-8">
+                    <input id="precioPastel" name="precioPastel" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="descripcionPastel" class="col-4 col-form-label">Descripcion:</label>
+               <div class="col-8">
+                    <input id="descripcionPastel" name="descripcionPastel" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <div class="offset-4 col-8">
+                    <button id="botonAddPastel" type="button" class="btn btn-primary">Enviar</button>
+               </div>
+          </div>
+     </form>
+</div>
+<div id="divMostrarListaPasteles" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
+
+<!--PEDIDO-->
+<div id="formPedido" class="col-8 m-auto divHijo pt-4" style="display: none;">
+     <form>
+          <div class="form-group row">
+               <label for="idPedido" class="col-4 col-form-label">ID:</label>
+               <div class="col-8">
+                    <input id="idPedido" name="idPedido" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="nCliente" class="col-4 col-form-label">Nombre Cliente:</label>
+               <div class="col-8">
+                    <input id="nCliente" name="nCliente" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="fechaPedido" class="col-4 col-form-label">Fecha:</label>
+               <div class="col-8">
+                    <input id="fechaPedido" name="fechaPedido" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="nombrePastel" class="col-4 col-form-label">Nombre Pastel:</label>
+               <div class="col-8">
+                    <input id="nombrePastel" name="nombrePastel" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          
+          <div class="form-group row">
+               <label for="lineaPedido" class="col-4 col-form-label">Linea Pedido:</label>
+               <div class="col-8">
+                    <input id="lineaPedido" name="lineaPedido" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+         
+          <div class="form-group row">
+               <div class="offset-4 col-8">
+                    <button id="botonAddPedido" type="button" class="btn btn-primary">Enviar</button>
+               </div>
+          </div>
+     </form>
+</div>
+<div id="divMostrarListaPedido" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
+
+
+<!--ESTABLECIMIENTOS-->
+<div id="formEstablecimiento" class="col-8 m-auto divHijo pt-4" style="display: none;">
+     <form>
+          <div class="form-group row">
+               <label for="nifEstablecimiento" class="col-4 col-form-label">NIF:</label>
+               <div class="col-8">
+                    <input id="nifEstablecimiento" name="nifEstablecimiento" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="numEmpleados" class="col-4 col-form-label">Nº Empleados:</label>
+               <div class="col-8">
+                    <input id="numEmpleados" name="numEmpleados" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+          <div class="form-group row">
+               <label for="nombreEstablecimiento" class="col-4 col-form-label">Nombre:</label>
+               <div class="col-8">
+                    <input id="nombreEstablecimiento" name="nombreEstablecimiento" type="text" required="required"
+                         class="form-control">
+               </div>
+          </div>
+        
+          <div class="form-group row">
+               <div class="offset-4 col-8">
+                    <button id="botonAddEstablecimiento" type="button" class="btn btn-primary">Enviar</button>
+               </div>
+          </div>
+     </form>
+</div>
+<div id="divMostrarListadoEstablecimientos" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
+
+
+          
+</div>  
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script src="objetos.js"></script>
+<script src="codigo.js"></script>
+
+
+</body>
+
+</html>

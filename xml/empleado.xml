@@ -1,0 +1,20 @@
+<empleados>
+   <empleado dni="11225566K">
+      <nombre>Mario Neta</nombre>
+      <email>marioneta@gmail.com</email>
+      <telefono>111111111</telefono>
+      <cargo>repartidor</cargo>
+   </empleado>
+   <empleado dni="34546798D">
+      <nombre>Elvisa Arias</nombre>
+      <email>elvisa@gmail.com</email>
+      <telefono>222222222</telefono>
+      <cargo>pastelera</cargo>
+   </empleado>
+   <empleado dni="99786509J">
+      <nombre>Alan Brito</nombre>
+      <email>brito@gmail.com</email>
+      <telefono>333333333</telefono>
+      <cargo>repartidor</cargo>
+   </empleado>
+</empleados>

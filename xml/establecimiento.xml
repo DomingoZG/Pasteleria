@@ -1,0 +1,14 @@
+<establecimientos>
+ <establecimiento nif="12345">
+  <numEmpleados>3</numEmpleados>
+  <nombre>Pasteleria Amada</nombre>
+ </establecimiento>
+  <establecimiento nif="34568">
+  <numEmpleados>4</numEmpleados>
+  <nombre>Pasteleria Rosa</nombre>
+ </establecimiento>
+  <establecimiento nif="14445">
+  <numEmpleados>5</numEmpleados>
+  <nombre>Pasteleria Plaza</nombre>
+ </establecimiento>
+</establecimientos>

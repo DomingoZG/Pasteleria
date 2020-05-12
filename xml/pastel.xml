@@ -1,0 +1,17 @@
+<pasteles>
+   <pastel id="23456">
+      <nombre>tiramisu</nombre>
+      <precio>3</precio>
+      <descripcion>Tarta de cafe y nata</descripcion> 
+   </pastel>
+   <pastel id="34567">
+      <nombre>Donut</nombre>
+      <precio>1</precio>
+      <descripcion>Rosquilla con azucar glass</descripcion> 
+   </pastel>
+   <pastel id="33434">
+      <nombre>Caña</nombre>
+      <precio>2</precio>
+      <descripcion>Hojaldre relleno de crema</descripcion> 
+   </pastel>
+</pasteles>
