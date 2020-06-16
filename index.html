@@ -34,7 +34,12 @@
                      <div class="dropdown-divider"></div>
                      <a class="dropdown-item" type="button" id="listadoCliente"
                           >Listado</a>
-                </div>
+                          <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" type="button" onclick='mostrar("#divFrmBusquedaCliente")'
+                          >Listado por Precio</a>
+             
+               
+              </div>
            </li>
            <!--Empleado-->
            <li class="nav-item dropdown">
@@ -47,6 +52,7 @@
                  <div class="dropdown-divider"></div>
                  <a class="dropdown-item" type="button" id="listadoEmpleado"
                       >Listado</a>
+                      
             </div>
           </li>
          
@@ -61,6 +67,9 @@
               <div class="dropdown-divider"></div>
                <a class="dropdown-item" type="button" id="listadoPasteles"
                >Listado</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" type="button" onclick='mostrar("#divFrmBusquedaPasteles")'
+               >Listado por Precio</a>
               </div>
          </li>
 
@@ -140,6 +149,29 @@
              </div>
         </form>
    </div>
+   <!--BUSQUEDA POR ID-->
+   <div id="divFrmBusquedaCliente" class="col-8 m-auto divHijo pt-4" style="display: none;">
+     <form>
+          <div class="form-group row">
+               <label for="dniCliente" class="col-4 col-form-label">DNI:</label>
+               <div class="col-8">
+                    <input id="dniCliente" name="dniCliente" type="text" required="required"
+                         class="form-control">
+               </div>
+        
+             <div class="offset-4 col-8">
+                  <button id="botonBuscar" type="button" class="btn btn-primary">Buscar</button>
+             </div>
+        </div>
+   
+     </form>
+   
+   </div>
+
+
+
+
+
    <div id="divMostrarListaClientes" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
 
    <!--EMPLEADOS-->
@@ -240,6 +272,25 @@
      </form>
 </div>
 <div id="divMostrarListaPasteles" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
+<!--Busqueda LISTADO PASTELES POR PRECIO-->
+<div id="divFrmBusquedaPasteles" class="col-8 m-auto divHijo pt-4" style="display: none;">
+  <form>
+     <input type="checkbox" id="precioMinimo" name="precioMinimo" value="PrecioMi">
+     <label for="precioMinimo"> Precio Minimo</label><br>  
+     <input type="checkbox" id="PrecioMayor" name="precioMayor" value="PrecioMa">
+     <label for="precioMinimo"> Precio Mayor</label><br>  
+     <div class="form-group row">
+          <div class="offset-4 col-8">
+               <button id="botonBuscar" type="button" class="btn btn-primary">Buscar</button>
+          </div>
+     </div>
+
+  </form>
+
+</div>
+
+
+
 
 <!--PEDIDO-->
 <div id="formPedido" class="col-8 m-auto divHijo pt-4" style="display: none;">
@@ -326,6 +377,7 @@
 <div id="divMostrarListadoEstablecimientos" class="col-8 m-auto divHijo pt-4" style="display: none;"></div>
 
 
+
           
 </div>  
 
@@ -340,6 +392,7 @@ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07j
 crossorigin="anonymous"></script>
 <script src="objetos.js"></script>
 <script src="codigo.js"></script>
+
 
 
 </body>

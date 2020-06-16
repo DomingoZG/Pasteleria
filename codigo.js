@@ -148,6 +148,13 @@ function ocultar()
     }
   }
 
+
+  function limpiar() {
+    setTimeout('document.formularioCliente.reset()',2000);
+    return false;
+}
+
+
   //LISTADO CLIENTES
 
   document
@@ -160,6 +167,11 @@ function listadoClientes() {
     ["DNI", "Nombre", "Teléfono", "Direccion"],
     "estaTablaClientes"
   );
+  let oTablaAnterior = document.querySelector("#divMostrarListaClientes table ");
+  if(oTablaAnterior!=null)
+  {
+    oTablaAnterior.remove();
+  }
   document.querySelector("#divMostrarListaClientes").appendChild(tabla);
   miPasteleria.personas.forEach(cliente =>{if(cliente instanceof Cliente)
     document
@@ -235,6 +247,11 @@ function listadoEmpleados() {
     ["DNI", "Nombre", "Email", "Telefono", "Cargo"],
     "estaTablaDeEmpleados"
   );
+  let oTablaAnterior = document.querySelector("#divMostrarListaEmpleados table ");
+  if(oTablaAnterior!=null)
+  {
+    oTablaAnterior.remove();
+  }
   document.querySelector("#divMostrarListaEmpleados").appendChild(tabla);
 
   miPasteleria.personas.forEach(empleado =>{ if (empleado instanceof Empleado)
@@ -313,6 +330,11 @@ function listadoPedidos() {
     ["Id", "Nombre Cliente", "Fecha", "Pastel"],
     "estaTablaPedidos"
   );
+  let oTablaAnterior = document.querySelector("#divMostrarListaPedido table ");
+  if(oTablaAnterior!=null)
+  {
+    oTablaAnterior.remove();
+  }
   document.querySelector("#divMostrarListaPedido").appendChild(tabla);
 
   miPasteleria.pedidos.forEach(pedido =>
@@ -399,6 +421,11 @@ function listadoPasteles()
     ["ID", "Nombre", "Precio", "Descripcion"],
     "estaTablaDePasteles"
   );
+  let oTablaAnterior = document.querySelector("#divMostrarListaPasteles table ");
+  if(oTablaAnterior!=null)
+  {
+    oTablaAnterior.remove();
+  }
   document.querySelector("#divMostrarListaPasteles").appendChild(tabla);
   miPasteleria.pasteles.forEach(pastel =>
     document
@@ -477,6 +504,11 @@ function listadoEstablecimiento() {
     ["NIF", "NºEmpleados", "Nombre"],
     "estaTablaEstablecimientos"
   );
+  let oTablaAnterior = document.querySelector("#divMostrarListadoEstablecimientos table ");
+  if(oTablaAnterior!=null)
+  {
+    oTablaAnterior.remove();
+  }
   document.querySelector("#divMostrarListadoEstablecimientos").appendChild(tabla);
 
   miPasteleria.establecimientos.forEach(establecimiento =>
@@ -491,10 +523,10 @@ function listadoEstablecimiento() {
 }
 //Tabla para listado Establecimientos
 
-function genTablaEstablecimiento(array, nif) 
+function genTablaEstablecimiento(array, id) 
 {
   let tabla = document.createElement("TABLE");
-  tabla.nif = nif;
+  tabla.id = id;
   tabla.classList.add("table");
   let thead = tabla.createTHead();
   let fila = thead.insertRow(-1);
